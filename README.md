@@ -22,12 +22,15 @@ To run locally, you do need to pull the requisite NPM Dependencies (as listed be
 This is supposed to be a fun project, and I'm always happy to take suggestions!
 
 ## Dependencies 
-* discord.js v.13.6.0
-* fs v.0.0.1-security
-* node-fetch v.3.2.3
-* ping v.0.4.1
-* ws v.8.5.0
-* yargs v.17.4.1
+* base
+* containers
+* emoji
+* discord-haskell
+* text
+* unliftio
+* directory
+* random
+* bytestring
 
 ## Special Thanks
 * MTU Huskies Discord for the original idea, and the triple-dog dare in order to even make this at all. Their continuous harassment of my bot has been a great motivator to make it better.
@@ -35,3 +38,4 @@ This is supposed to be a fun project, and I'm always happy to take suggestions!
 * @jeongm-in (Plep) for being a lil development buddy and giving me ideas for DB management and (hopefully) setting up GitHub Actions
 * @MiGhTyMech12 for spell-checking the README.
 * to ethan.
+* treefroog
