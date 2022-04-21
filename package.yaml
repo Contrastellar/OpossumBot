@@ -1,0 +1,54 @@
+name:                PossumBot
+version:             0.1.0.0
+github:              "Contrastellar/PossumBot"
+license:             MIT
+author:              "Gabriella Agathon (Contrastellar)"
+maintainer:          "gjstimac@mtu.edu"
+copyright:           "2022 Gabriella Agathon (Contrastellar)"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/Contrastellar/PossumBot#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers >= 0.6 && < 0.7
+- emoji
+- discord-haskell
+- text
+- unliftio
+- directory
+- random
+- bytestring
+library:
+  source-dirs: src
+
+executables:
+  PossumBot-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PossumBot
+
+tests:
+  PossumBot-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - PossumBot

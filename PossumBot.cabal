@@ -1,0 +1,82 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           PossumBot
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Contrastellar/PossumBot#readme>
+homepage:       https://github.com/Contrastellar/PossumBot#readme
+bug-reports:    https://github.com/Contrastellar/PossumBot/issues
+author:         Gabriella Agathon (Contrastellar)
+maintainer:     gjstimac@mtu.edu
+copyright:      2022 Gabriella Agathon (Contrastellar)
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/Contrastellar/PossumBot
+
+library
+  exposed-modules:
+      PossumLib
+  other-modules:
+      Paths_PossumBot
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , containers ==0.6.*
+    , directory
+    , discord-haskell
+    , emoji
+    , random
+    , text
+    , unliftio
+  default-language: Haskell2010
+
+executable PossumBot-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_PossumBot
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PossumBot
+    , base >=4.7 && <5
+    , bytestring
+    , containers ==0.6.*
+    , directory
+    , discord-haskell
+    , emoji
+    , random
+    , text
+    , unliftio
+  default-language: Haskell2010
+
+test-suite PossumBot-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_PossumBot
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      PossumBot
+    , base >=4.7 && <5
+    , bytestring
+    , containers ==0.6.*
+    , directory
+    , discord-haskell
+    , emoji
+    , random
+    , text
+    , unliftio
+  default-language: Haskell2010
