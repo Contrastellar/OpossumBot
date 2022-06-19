@@ -1,0 +1,4 @@
+/**
+ * misc functions for OpossumBot!
+ */
+

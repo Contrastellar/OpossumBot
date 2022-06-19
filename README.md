@@ -25,13 +25,13 @@ To run locally, you do need to pull the requisite NPM Dependencies (as listed be
 This is supposed to be a fun project, and I'm always happy to take suggestions!
 
 ## Dependencies 
-* discord.js v.13.6.0
+* discord.js v.13.8.0
 * fs v.0.0.1-security
 * mysql2 v.2.3.3
-* node-fetch v.3.2.3
-* ping v.0.4.1
-* ws v.8.5.0
-* yargs v.17.4.1
+* node-fetch v.3.2.6
+* ping v.0.4.2
+* ws v.8.8.0
+* yargs v.17.5.1
 
 ## Special Thanks
 * MTU Huskies Discord for the original idea, and the triple-dog dare in order to even make this at all. Their continuous harassment of my bot has been a great motivator to make it better.

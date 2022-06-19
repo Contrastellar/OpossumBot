@@ -47,71 +47,76 @@ connection.query("USE OpossumBot;", function (error, results, fields){
 
 async function userCommands(msg, args){
     //TODO This can be set up as a switch case that links to other functions as well, this would probably be easier and allow some kind of automation
+     
 
-     /**
-     * @Command: git
-     * links back to the github repo
-     */
-    if(args[0] === "!git"){
-        msg.reply("https://github.com/Contrastellar/OpossumBot");
-    }
+    switch(args[0]){
+        /**
+         * @command: possum
+         * Fetches an opossum
+         *  from the db, attaches
+         * alt text, sends the message
+         */
+        case "!possum":
+            // Need to grab number of opossums first
+            let opossumCount;
+            connection.query("SELECT count(Picture) from OpossumPictures;", function(err, results, fields){
+                console.log(results);
+            });
+            msg.reply("Sorry, this feature isn't implemented yet!\nDebug: Opossum Count --> " + opossumCount);
 
-    /**
-     * @command: possum
-     * Fetches an opossum
-     *  from the db, attaches
-     * alt text, sends the message
-     */
-    if(args[0] === "!possum"){
-        // Need to grab number of opossums first
-        let opossumCount;
-        connection.query("SELECT count(Picture) from OpossumPictures;", function(err, results, fields){
-            console.log(results);
-        });
-        msg.reply("Sorry, this feature isn't implemented yet!\nDebug: Opossum Count --> " + opossumCount);
-    }
-    
-    //TODO both stroll and crypto need to be added to the db as blobs
+        break;
 
-    /**
-     * @command: stroll
-     * https://cdn.discordapp.com/attachments/743621304246206494/937426290296881163/video0-5_1.mov
-     */
-    if(args[0] === "!stroll"){
-        msg.reply("https://cdn.discordapp.com/attachments/743621304246206494/937426290296881163/video0-5_1.mov");
-    }
+        /**
+         * @Command: git
+         * links back to the github repo
+         */
+        case "!git":
+            msg.reply("https://github.com/Contrastellar/OpossumBot");
 
-    /**
-     * @command: crypto
-     * https://cdn.discordapp.com/attachments/812580457719005206/926519160014516284/jpZySFGv8ZiWcX40.mp4
-     */
-    if(args[0] === "!crypto"){
-        msg.reply("https://cdn.discordapp.com/attachments/812580457719005206/926519160014516284/jpZySFGv8ZiWcX40.mp4");
-    }
+        break;
 
-    /**
-     * @command: vibe
-     * https://cdn.discordapp.com/attachments/547164475535523890/735923050696015903/1593712826771.mp4
-     */
-    if(args[0] === "!vibe"){
-        msg.reply("https://cdn.discordapp.com/attachments/547164475535523890/735923050696015903/1593712826771.mp4");
-    }
+        /**
+         * @command: stroll
+         * https://cdn.discordapp.com/attachments/743621304246206494/937426290296881163/video0-5_1.mov
+         */
+        case "!stroll":
 
-    /**
-     * @command: wheel
-     * "https://cdn.discordapp.com/attachments/161297309978591233/903331498294390794/video0_13.mp4"
-     */
-    if(args[0] === "!wheel"){
-        msg.reply("https://cdn.discordapp.com/attachments/161297309978591233/903331498294390794/video0_13.mp4");
-    }
-    
-    /**
-     * @command: metar
-     * could be a fun command to fetch data from the NWS/NOAA
-     */
-    if(args[0] === "!metar"){
-        msg.reply("???");
+        break;
+
+        /**
+         * @command: crypto
+         * https://cdn.discordapp.com/attachments/812580457719005206/926519160014516284/jpZySFGv8ZiWcX40.mp4
+         */
+        case "!crypto":
+
+        break;
+
+        /**
+         * @command: vibe
+         * https://cdn.discordapp.com/attachments/547164475535523890/735923050696015903/1593712826771.mp4
+         */
+        case "!vibe":
+
+        break;
+
+        /**
+         * @command: wheel
+         * "https://cdn.discordapp.com/attachments/161297309978591233/903331498294390794/video0_13.mp4"
+         */
+        case "!wheel":
+
+        break;
+        
+        /**
+         * @command: metar
+         * could be a fun command to fetch data from the NWS/NOAA
+         */
+        case "!metar":
+
+        break;
+
     }
 }
+    //TODO both stroll and crypto need to be added to the db as blobs
 
 module.exports = { userCommands };
