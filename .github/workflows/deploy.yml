@@ -38,3 +38,6 @@ jobs:
       - name: Deploy with rsync
         run: rsync -avz $GITHUB_WORKSPACE ${{ secrets.SSH_USER }}@${{secrets.SSH_HOST }}:/home/contrastellar/OpossumBot_run
       
+      - name: Restart bot process
+        run: systemctl restart OpossumBot
+      
