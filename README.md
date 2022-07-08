@@ -1,5 +1,5 @@
 # OpossumBot v.2
-[comment]: <> "[![deploy-to-host](https://github.com/Contrastellar/OpossumBot/actions/workflows/deploy.yml/badge.svg)](https://github.com/Contrastellar/OpossumBot/actions/workflows/deploy.yml)"
+[![deploy-to-host](https://github.com/Contrastellar/OpossumBot/actions/workflows/deploy.yml/badge.svg)](https://github.com/Contrastellar/OpossumBot/actions/workflows/deploy.yml)
 
 OpossumBot v.2 is a rework of contrastellar's original PossumBot Discord text bot. This bot is primarily made for fun, and with the idea of having fun and learning new things in Node.JS and in software development as a whole.
 
